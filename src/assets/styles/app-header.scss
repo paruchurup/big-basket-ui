@@ -1,0 +1,93 @@
+header a {
+    color: $color_Neutral_Alabaster;
+}
+
+.nav-break {
+    font-size: 2em;
+    color: white;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.navbar-utility {
+    background-color: black;
+    color: $color_Grey_Alto;
+    font-weight: 800;
+    border: none;
+    height: 25px;
+    border-radius: 0;
+    font-size: 0.8em;
+
+    span a {
+        color: $color_Grey_Alto;
+        margin-left: 1em;
+        &:hover {
+            color: white;
+        }
+    }
+}
+
+.utility-links a {
+    font-weight: 700;
+}
+
+.navbar-main {
+    background: linear-gradient(0deg, $color_NavGrad_Top 0, $color_NavGrad_Bot 100%);
+    border-left: none;
+    border-radius: 0;
+    border-right: none;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.primary-nav {
+    font-size: 1em;
+    display: flex;
+    flex-grow: 1;
+    align-items: flex-end;
+    align-self: stretch;
+
+    a {
+        display: inline;
+        padding: 0.4em;
+        padding-left: 0.6em;
+        padding-right: 0.6em;
+        &:hover {
+            color: $color_Green_Accent;
+        }
+        &:active,
+        &.active {
+            background: $color_Neutral_Alabaster;
+            color: $color_Primary_Text;
+        }
+    }
+
+    .ellipsis {
+        margin: 10px 0.5em;
+        color: $color_Neutral_Alabaster;
+        padding-bottom: 2px;
+    }
+}
+
+.edesign-logo {
+    flex-grow: 0;
+
+    font-size: 2em;
+    color: white;
+    padding-right: 0.5em;
+    font-variant: small-caps;
+
+    i {
+        font-style: normal;
+        font-variant: normal;
+        color: $color_HJ_Green;
+    }
+}
+
+.herff-logo {
+    flex-grow: 0;
+
+    img {
+        height: 40px;
+    }
+}

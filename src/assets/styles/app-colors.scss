@@ -1,0 +1,100 @@
+$color_Blue_BayWater: #234785;
+$color_Blue_Royal: #2f5dea;
+$color_Blue_Navy: #3796d7;
+$color_Blue_Cyan: #55f7f7;
+$color_Blue_Baby: #7fceff;
+$color_Blue_Sky: #b2e1ff;
+$color_Blue_Mystic: #e6ecef;
+$color_Green_LaPalma: #3c8e13;
+$color_Green_Olive: #5a8f00;
+$color_Green_Mantis: #5db240;
+$color_Green_Moss: #a3d793;
+$color_Grey_MineShaft: #2c2c2c;
+$color_Grey_Emperor: #555555;
+$color_Grey_DustyGrey: #979797;
+$color_Grey_Alto: #dddddd;
+$color_Grey_Gallery: #ebebeb;
+$color_Grey_Alabaster: #e7e0e0;
+$color_Orange_Saddle: #944a00;
+$color_Orange_Blaze: #ff6600;
+$color_Orange_Tangerine: #e48701;
+$color_Purple_Orchid: #91219e;
+$color_Purple_Rouge: #b24b74;
+$color_Purple_Magenta: #e9008a;
+$color_Red_Maroon: #840000;
+$color_Red: #ff0000;
+
+//$color_Red_Cinnabar:        #bd362f;
+$color_Red_Puce: #d0aeae;
+$color_Yellow_Supernova: #ffdd00;
+$color_Yellow_Lemon: #f8f136;
+$color_Yellow_Citrine: #fafac9;
+$color_Yellow_Sand: #f4e284;
+$color_Yellow_Corn: #ffffad;
+$color_Yellow_Goldenrod: #c6a006;
+
+/* New Colors */
+//TODO : add Status Colors
+$color_Green_LaPalma: #39892f;
+$color_Green_Mint: #65bb28;
+$color_Grey_Night_Rider: #333333;
+$color_Grey_Silver: #b3b3b3;
+$color_Neutral_Stonewall: #817362;
+$color_Neutral_Silk: #b7ac9e;
+$color_Neutral_Blanc: #d8cebf;
+$color_Neutral_Soapstone: #efebe5;
+$color_Neutral_Gallery: #dad5ce;
+$color_Neutral_Alabaster: #f9f7f4;
+$color_Red_Cinnabar: #f34235;
+
+//Gradients
+$color_Green_Mantis: #64ba29; //gradient color only
+$color_Grey_MineShaft: #1a1a1a; //gradient color only
+$color_Grey_Nero: #212121; //gradient color only
+$color_Grey_Charcoal: #4d4d4d; //gradient color only
+$color_Grey_Emperor: #616161; //gradient color only
+$color_Grey_Gris: #757575; //gradient color only
+$color_Grey_Gainsboro: #bdbdbd; //gradient color only
+
+$color_Neutral_BG: $color_Neutral_Blanc;
+$color_Content_Container: $color_Neutral_Alabaster;
+$color_HJ_Green: $color_Green_LaPalma;
+$color_Green_Accent: $color_Green_Mint;
+$color_ActiveBtnGrad_Top: $color_Green_Mantis;
+$color_ActiveBtnGrad_Bot: $color_Green_LaPalma;
+$color_HoverGrad_Light: $color_Green_Mint;
+$color_HoverGrad_Dark: #55aa40;
+$color_Primary_Text: $color_Grey_Night_Rider;
+$color_NavGrad_Top: $color_Grey_MineShaft;
+$color_NavGrad_Bot: $color_Grey_Charcoal;
+
+//Book Status Colors
+$color_Edited: $color_Yellow_Supernova;
+$color_Unedited: $color_Grey_DustyGrey;
+$color_Submitted: $color_Green_LaPalma;
+$color_Presubmit: $color_Purple_Orchid;
+$color_Proof: $color_Orange_Blaze;
+$color_Preflight: $color_Blue_Baby;
+$color_Overdue: $color_Red;
+$white: white;
+$black: black;
+
+$primary: $color_Blue_Navy;
+$success: $color_Green_Mantis;
+$info: $color_Blue_Baby;
+$warning: $color_Orange_Tangerine;
+$danger: $color_Red_Cinnabar;
+
+$hj-color-main-background-grey: $color_Grey_Alto;
+$hj-color-tooltips: $color_Yellow_Citrine;
+$body-bg: $color_Neutral_Blanc;
+$input-border-focus: $color_HoverGrad_Dark;
+$input-color: $color_Primary_Text;
+$dropdown-bg: $color_Neutral_Alabaster;
+$dropdown-link-color: $color_Primary_Text;
+
+$state-success-text: $color_Green_LaPalma; //#3c763d
+$state-info-text: $primary; //#31708f
+$state-info-bg: $color_Blue_Mystic; //#d9edf7
+$state-warning-text: $warning; //#8a6d3b
+$state-danger-text: $danger; //#a94442

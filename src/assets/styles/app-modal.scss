@@ -1,0 +1,41 @@
+.hj-dialog-header {
+    text-align: center;
+    margin-top: 20px;
+    h4 {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+}
+
+.hj-dialog-body {
+    font-size: 15px;
+    margin: 10px 20px 40px;
+    min-height: 120px;
+    text-align: center;
+}
+
+.hj-dialog-footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    button {
+        border-radius: 0;
+        flex-grow: 1;
+        width: 50%;
+        margin: 0;
+        float: left;
+        font-size: 15px;
+        font-weight: 700;
+        border: 0;
+    }
+    button.btn-default {
+        color: #000000;
+        background-color: #dddddd;
+        &:hover {
+            background-color: #bbb;
+        }
+    }
+    button + button {
+        border-left: 1px solid rgba(0, 0, 0, 0.2); //this gives a border to divide 2 buttons that are the same color.
+    }
+}

@@ -1,0 +1,64 @@
+<div class="container-fluid"> 
+    <div style="text-align:center" class="hj-containers-lg mt-3 p-2">
+        <h1></h1><span style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"> New User Registration </span> <h1></h1>
+        <form [formGroup]="yogaSessionForm" (ngSubmit)="onSubmit()">
+            <div class="form-group row">
+                <label for="name" class="col-sm-4 col-lg-2 col-form-label">Session Start Time: </label>
+                <div class="col-sm-5">
+                    
+ 
+                        <p-calendar
+                          formControlName="sessionStartTime"
+                          selectionMode="range"
+                          [readonlyInput]="true"
+                          [showIcon]="true"
+                          [showButtonBar]="true"
+                          [placeholder]="'Slot Time'"
+                          [styleClass] = "'custom-height'"
+                          [inputStyle]="{'height':'2.4em', 'width':'32.28em'}"
+                          inputStyleClass="text-align"
+                          showTime="true"
+                          (onSelect)="rangeChange()">
+                        </p-calendar>
+                     
+                </div>
+            </div>
+
+           
+
+  
+            <div class="form-group row">
+                <label for="mobile" class="col-sm-4 col-lg-2 col-form-label">No of Seats: </label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" formControlName="seatsAvailable" id="seatsAvailable">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="age" class="col-sm-4 col-lg-2 col-form-label">Trainer: </label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" formControlName="trainerName" id="trainerName">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="ailments" class="col-sm-4 col-lg-2 col-form-label">Video Url: </label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" formControlName="liveStreamUrl" id="liveStreamUrl">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-sm-4 col-lg-2 col-form-label"></div>
+                <div class="col-sm-5">
+                    <button class="btn btn-hj-primary" type="submit" [disabled]="yogaSessionForm.invalid">
+                        Submit
+                    </button>
+                    <button type="button" class="btn btn-hj-secondary ml-3">Cancel</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+

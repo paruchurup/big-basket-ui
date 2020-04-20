@@ -1,0 +1,76 @@
+/* ************************************ Accordion / Side Nav with Steps  ******************************************* */
+.hj-accordion {
+    .card {
+        border-radius: 0;
+    }
+    .card-header {
+        padding: 0;
+        background-color: transparent;
+        border-bottom: 0;
+        button {
+            position: relative;
+            font-size: 1rem;
+            font-weight: bold;
+            background-color: lighten($color_Grey_Silver, 20%);
+            border: none;
+            border-bottom: 5px solid $color_HJ_Green;
+            color: $color_Grey_Night_Rider;
+            display: block;
+            margin-bottom: 5px;
+            padding: 5px 10px 5px 2.5em;
+            border-radius: 0;
+            width: 100%;
+            text-align: left;
+            &::after {
+                content: '\2013';
+                float: right;
+                font-size: 1.9em;
+                line-height: 1em;
+                margin-top: -0.2em;
+            }
+            &.collapsed::after {
+                content: '+';
+            }
+            &::before {
+                content: '1';
+                position: absolute;
+                left: 0;
+                top: 0;
+                padding: 0.25em;
+                /* float: left; */
+                font-size: 2em;
+                line-height: 0.5em;
+                background-color: $color_HJ_Green;
+                height: 100%;
+                color: white;
+            }
+        }
+        button.collapsed {
+            border: none;
+            .fa-caret-down {
+                display: inline-block;
+            }
+            .fa-caret-up {
+                display: none;
+            }
+        }
+        button:hover {
+            text-decoration: none;
+            &::after {
+                color: $color_Green_Accent;
+            }
+        }
+        button:focus {
+            text-decoration: none;
+        }
+    }
+    .card:nth-child(2) .card-header button::before {
+        content: '2';
+    }
+    .card:nth-child(3) .card-header button::before {
+        content: '3';
+    }
+    .card:nth-child(4) .card-header button::before {
+        content: '4';
+    }
+}

@@ -1,0 +1,75 @@
+
+<div class="container-fluid">
+    <!----------THIS IS FOR THE SUB HEADER-------------->
+    <div class="row justify-content-between hj-sub-nav">
+        <!--bootstrap layout div, don't move-->
+        <div class="hj-page-title col-auto">
+            <h1>
+                <i class="fas fa-user-chart"></i>
+                <span>List of Users</span>
+            </h1>
+        </div>
+        
+    </div>
+
+   
+    <!---------- END SUB HEADER-------------->
+    <div class="row">
+        <div class="hj-viewport-height-subnav col-12">
+            <div class="hj-containers-lg my-3 p-2">
+                
+                <div class="row m-0" *ngIf="yogasessions && users.length > 0">
+                                        
+                    <div class="col">
+                        <div class=" p-3">
+                            <p-table #teamGrid [columns]="cols" [value]="yogasessions" [scrollable]="true"
+                                     scrollHeight="300px" [resizableColumns]="true">
+                               
+                                <ng-template pTemplate="colgroup" let-columns>
+                                    <colgroup>
+                                        <col *ngFor="let col of columns">
+                                    </colgroup>
+                                </ng-template>
+                                <ng-template pTemplate="header" let-columns>
+                                    <tr>
+                                        <th *ngFor="let col of columns" pResizableColumn [pSortableColumn]="col.field">
+                                            {{col.header}}
+                                            <p-sortIcon [field]="col.field" ariaLabel="Activate to sort"
+                                                        ariaLabelDesc="Activate to sort in descending order"
+                                                        ariaLabelAsc="Activate to sort in ascending order"></p-sortIcon>
+                                        </th>
+                                        <th></th>
+                                    </tr>
+                                </ng-template>
+                                <ng-template pTemplate="body" let-users let-rowData let-columns="columns">
+                                    <tr>
+                                        <td *ngFor="let col of cols" class="ui-resizable-column">                                          
+                                            <span>{{rowData[col.field]}}</span>
+                                        </td>
+                                        <td class="text-center" colspan="1">
+                                            <div class="d-inline-flex">
+                                               
+                                                <button class="btn btn-sm btn-hj-negative ml-2"
+                                                    (click)="deleteSession()">
+                                                    <i class="fas fa-trash"></i>
+                                                    <span class="d-sm-none d-xl-inline pl-1">Cancel</span>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </ng-template>
+                            </p-table>
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-0" *ngIf="!isLoading && users.length === 0">
+                    There is no data to display.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div *ngIf="isLoading" class="hj-loading">
+        <i class="fas fa-spinner fa-spin hj-spinner"></i>
+    </div>
+

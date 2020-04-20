@@ -1,0 +1,59 @@
+/* ************************************ CONTAINERS *********************************** */
+.hj-containers-lg {
+    background-color: $color_Neutral_Alabaster;
+    border-radius: $border-radius;
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.3);
+}
+
+.hj-containers-sm {
+    background-color: $color_Neutral_Alabaster;
+    border-radius: 2px;
+    box-shadow: 0 1px 0 $color_Neutral_Stonewall;
+}
+.hj-containers-lg-header {
+    font-weight: 700;
+    font-size: 14pt;
+    background-color: $color-Neutral_Silk;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
+
+.hj-container-checkboxes {
+}
+
+.hj-container-2-col-list {
+    column-count: 2;
+    column-gap: 5px;
+    column-width: 225px;
+    li {
+        break-inside: avoid;
+    }
+}
+
+.hj-option-container {
+    background-color: white;
+    border-radius: $border-radius;
+    box-shadow: inset 0 0 5px 2px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    display: block;
+}
+
+.hj-option-title {
+    background-color: $color_Grey_Night_Rider;
+    color: $color_Neutral_Alabaster;
+    padding: 4px 15px;
+    margin: 0;
+    font-weight: 700;
+    font-size: 12px;
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+}
+
+.hj-option-content {
+    max-height: 40em;
+    overflow: auto;
+    display: block;
+    margin-bottom: $border-radius;
+}

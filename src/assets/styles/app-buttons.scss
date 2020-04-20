@@ -1,0 +1,352 @@
+/*
+Title: Buttons
+Description: These are reusable components that can be used anywhere on the site. They extend Bootstrap Buttons.
+1. btn-hj-primary
+2. btn-hj-secondary
+3. hj-input-dropdown
+4. hj-input-file
+5. btn-group-separate
+6. btn-group-separate
+
+*/
+
+/* ++++++++++++++++ Buttons ++++++++++++++ */
+//.btn-group .btn-default {
+//  width: 25% !important;
+//  img {
+//    margin-right: 0; // todo move inline class
+//  }
+//}
+
+//remove outline from buttons
+.btn,
+button {
+    &:active &:focus {
+        outline: none;
+    }
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
+}
+
+//============================  btn-hj-primary ====================================
+
+//====================== Herff Jones Primary Green Button ==============
+//both button and non button are used to provide specificity for buttons in button bars. however this can be used on a non button object to make it look like a button
+.btn-hj-primary,
+button.btn-hj-primary {
+    @extend .hj-gradient-primary-btn;
+    border: 1px solid $color_ActiveBtnGrad_Top;
+    color: $white;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background: linear-gradient(0deg, $color_HoverGrad_Dark 0, $color_HoverGrad_Light 100%);
+        color: $white;
+    }
+
+    &:active {
+        @extend .hj-gradient-primary-btn;
+
+        &:focus {
+            outline: none;
+        }
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+.btn-hj-primary {
+    &.selected {
+        background: linear-gradient(0deg, #55aa40 0, #81d53c 100%);
+        color: $white;
+    }
+}
+
+//============================  END ====================================
+//============================ Button for neutral events such as close or cancel ====================================
+
+.btn-hj-neutral {
+    background: lighten($color_Grey_Silver, 10%);
+    color: $color_Primary_Text;
+    border: 1px solid $color_Grey_Silver;
+    box-shadow: none;
+    &:hover,
+    &:focus {
+        background: $color_Grey_Silver;
+    }
+}
+
+//============================ Button for negative events such as close or cancel ====================================
+
+.btn-hj-negative {
+    background: darken($state-danger-text, 20%);
+    color: white;
+    border: 1px solid darken($state-danger-text, 30%);
+    box-shadow: none;
+    &:hover,
+    &:focus {
+        background: darken($state-danger-text, 30%);
+        color: white;
+    }
+}
+
+//============================  btn-hj-secondary ====================================
+//============== Utility button button within a button group  used for utility menu  ==============
+//this class is added to the .btn. it creates at button with a transparent background and Green text
+button.btn-hj-secondary {
+    background-color: transparent;
+    color: $color_HJ_Green;
+    border: none;
+    box-shadow: none;
+    font-size: 0.9em;
+    &.dropdown-toggle.btn {
+        //had to make it very specific to overide bootstraps
+        box-shadow: none;
+    }
+    &.dropdown-toggle-undefined {
+        color: lighten($color_Primary_Text, 20%);
+        font-style: italic;
+        font-weight: 200;
+    }
+
+    &:hover,
+    &:focus {
+        color: $color_Green_Accent;
+    }
+    &:active {
+        box-shadow: none;
+    }
+}
+.btn-hj-dropdown::after {
+    content: '\f107';
+    display: inline-block;
+    font: normal bold normal 14px/1 $font-awesome-family;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    vertical-align: 0;
+    border: 0;
+    width: auto;
+    height: auto;
+    padding-left: 0.5em;
+}
+//this is added with out above tje ngbDropdown directive
+.hj-dropdown-menu {
+    .dropdown-menu,
+    &.dropdown-menu {
+        background-color: $color_Neutral_Alabaster;
+        min-width: 260px;
+        padding-top: 0;
+        padding-bottom: 0;
+        border: 1px solid $color_Neutral_Gallery;
+    }
+
+    .dropdown-item:hover {
+        color: white;
+        background: linear-gradient(-90deg, $color_HoverGrad_Dark 0, $color_HoverGrad_Light 100%);
+        &.disabled {
+            color: lighten($color_Primary_Text, 35%);
+            background: $color_Neutral_Alabaster;
+        }
+    }
+    .dropdown-item {
+        color: $color_Primary_Text;
+        font-weight: 300;
+        font-size: 12pt;
+        padding: 2px 10px;
+        clear: both;
+        white-space: nowrap;
+        cursor: pointer;
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: baseline;
+        &.disabled {
+            color: lighten($color_Primary_Text, 35%);
+            cursor: not-allowed;
+        }
+    }
+
+    .subheading {
+        color: $color_HJ_Green;
+        background-color: $color_Neutral_Blanc;
+        cursor: default;
+        padding: 5px 15px;
+        @extend h5;
+    }
+}
+
+.btn-hj-inline {
+    font-size: inherit;
+    background-color: transparent;
+    margin: 0;
+    padding: 0.2em 0.6em;
+    color: rgba(0, 0, 0, 0.4);
+    &:hover {
+        background-color: transparent;
+        color: white;
+    }
+}
+
+//For tags being searched on
+.btn-tag i {
+    border-left: 1px solid $color_Neutral_Blanc;
+    margin-left: 3px;
+    padding: 4px 0 4px 6px;
+}
+
+.btn-tag i.tag-prefix {
+    border-right: 1px solid $color_Neutral_Blanc;
+    border-left: 0;
+    margin-left: 0;
+    margin-right: 3px;
+    padding: 4px 6px 4px 0;
+}
+
+.btn-tag {
+    padding: 0 1em;
+    font-size: 1em;
+    //line-height: 1.5;
+    border-radius: 1.5em;
+    background-color: $color_Neutral_Alabaster;
+    &:hover {
+        background-color: darken($color_Neutral_Alabaster, 5%);
+    }
+}
+.btn-tag-sm {
+    font-size: 0.7em;
+}
+
+.btn-tag-primary {
+    color: $color_Neutral_Alabaster;
+    background-color: $color_Green_LaPalma;
+    &:hover {
+        color: $color_Neutral_Alabaster;
+        background-color: darken($color_Green_LaPalma, 5%);
+    }
+}
+
+//This needs moved somewhere.. not sure where
+.hj-select-panel-pop-down {
+    width: 98%;
+    margin-left: 4%;
+    .popover-body {
+        padding: 0;
+    }
+    ul {
+        max-height: 200px;
+        overflow-y: auto;
+        margin: 0;
+        padding: 0;
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+            padding-left: 0.3em;
+            padding-right: 0.3em;
+            cursor: pointer;
+            line-height: 1.75em;
+            &:hover {
+                background-color: $color_Green_Accent;
+                color: white;
+            }
+            &.selected {
+                background-color: $color_HJ_Green;
+                color: white;
+            }
+            &.selection-undefined {
+                color: lighten($color_Primary_Text, 20%);
+                font-style: italic;
+                &.selected {
+                    background-color: inherit;
+                    font-weight: bold;
+                    color: black;
+                }
+            }
+            .btn-hj-inline {
+                text-align: right;
+            }
+        }
+    }
+}
+
+.btn.btn-progress-bar {
+    position: relative;
+    background: lighten($color_Grey_Silver, 10%);
+    border: 0 solid #000;
+    &:hover {
+        background: $color_Grey_Silver;
+    }
+    .progress-bar-on-btn {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+    }
+    .progress {
+        height: 100%;
+        width: 100%;
+        background-color: transparent;
+        opacity: 0.4;
+    }
+}
+
+.hj-btn-round {
+    border-radius: 1em;
+    padding: 0;
+    margin: 0;
+    width: 2em;
+    height: 2em;
+
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 1.5em;
+}
+
+//As seen in spread view and book.
+.hj-panel-dropdown {
+    //label
+    .hj-pd-label {
+        color: $color_Neutral_Silk;
+        font-size: 0.63rem;
+        margin: 0;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+}
+
+//button group that are radio inputs
+.btn-group-toggle input[type='radio'] {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    pointer-events: none;
+}
+
+.btn-group label.btn:first-of-type {
+    border-top-left-radius: $border-radius-sm;
+    border-bottom-left-radius: $border-radius-sm;
+}
+.btn-group input:checked + label.btn-checked-primary {
+    background: linear-gradient(0deg, $color_ActiveBtnGrad_Bot 0, $color_ActiveBtnGrad_Top 100%);
+    border: 1px solid #666;
+    color: $white;
+    box-shadow: inset 0 0 50px 1px rgba(0, 0, 0, 0.4);
+}
+
+.btn-link-negative {
+    color: darken($danger, 25);
+    &:hover {
+        color: $danger;
+    }
+}
+.btn-link-neutral {
+    color: lighten($color_Grey_Night_Rider, 25);
+    &:hover {
+        color: $color_Grey_Night_Rider;
+    }
+}

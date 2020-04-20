@@ -1,0 +1,137 @@
+$tableBorder: 1px solid $color_Neutral_Gallery;
+$tableStripe: $color_Neutral_Alabaster;
+body {
+    .ui-widget {
+        font-family: $font-family-base;
+        font-size: $font-size-base;
+        text-decoration: none;
+    }
+
+    .ui-table {
+        .ui-table-summary {
+            background-color: $tableStripe;
+            color: $color_Primary_Text;
+            border: $tableBorder;
+            padding: 0.571em 1em;
+            text-align: center;
+        }
+        .ui-table-caption {
+            padding: 0;
+            color: $color_Primary_Text;
+            background-color: transparent;
+            border: none;
+        }
+        .ui-table-summary {
+            border-top: 0 none;
+            font-weight: 700;
+        }
+        .ui-table-thead > tr > th {
+            padding: 0.5em;
+            border-color: $tableBorder;
+            font-weight: 700;
+            color: $color_Primary_Text;
+            background-color: $color_Neutral_Gallery;
+            text-align: center;
+        }
+        .ui-table-tbody > tr > td {
+            padding: 0.5em;
+        }
+        .ui-table-tfoot > tr > td {
+            padding: 0.5em;
+            border: $tableBorder;
+            font-weight: 700;
+            color: $color_Primary_Text;
+            background-color: #ffffff;
+        }
+        .ui-sortable-column .ui-sortable-column-icon {
+            color: $color_Neutral_Stonewall;
+        }
+        .ui-sortable-column:not(.ui-state-highlight):hover {
+            background-color: #e0e0e0;
+            color: $color_Primary_Text;
+        }
+        .ui-sortable-column:not(.ui-state-highlight):hover .ui-sortable-column-icon {
+            color: $color_Primary_Text;
+        }
+        .ui-sortable-column.ui-state-highlight {
+            background-color: $color_Green_Accent;
+            color: #ffffff;
+        }
+        .ui-sortable-column.ui-state-highlight .ui-sortable-column-icon {
+            color: #ffffff;
+            &:focus {
+                outline: none;
+            }
+        }
+        .ui-editable-column input {
+            font-size: 1em;
+            font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .ui-editable-column input:focus {
+            outline: 1px solid $color_Green_Accent;
+            outline-offset: 2px;
+        }
+        .ui-table-tbody > tr {
+            background: #ffffff;
+            color: $color_Primary_Text;
+        }
+        .ui-table-tbody > tr > td {
+            background: inherit;
+            border: $tableBorder;
+        }
+        .ui-table-tbody > tr.ui-state-highlight {
+            background-color: $color_Green_Accent;
+            color: #ffffff;
+        }
+        .ui-table-tbody > tr.ui-state-highlight a {
+            color: #ffffff;
+        }
+        .ui-table-tbody > tr.ui-contextmenu-selected {
+            background-color: $color_Green_Accent;
+            color: #ffffff;
+        }
+        .ui-table-tbody > tr.ui-table-dragpoint-bottom > td {
+            box-shadow: inset 0 -2px 0 0 $color_Green_Accent;
+        }
+        .ui-table-tbody > tr:nth-child(even) {
+            background-color: $tableStripe;
+        }
+        .ui-table-tbody > tr:nth-child(even).ui-state-highlight {
+            background-color: $color_Green_Accent;
+            color: #ffffff;
+        }
+        .ui-table-tbody > tr:nth-child(even).ui-state-highlight a {
+            color: #ffffff;
+        }
+        .ui-table-tbody > tr:nth-child(even).ui-contextmenu-selected {
+            background-color: $color_Green_Accent;
+            color: #ffffff;
+        }
+        &.ui-table-hoverable-rows
+            .ui-table-tbody
+            > tr.ui-selectable-row:not(.ui-state-highlight):not(.ui-contextmenu-selected):hover {
+            cursor: pointer;
+            background-color: #eaeaea;
+            color: $color_Primary_Text;
+        }
+        .ui-column-resizer-helper {
+            background-color: $color_Green_Accent;
+        }
+
+        th:focus {
+            outline: none;
+        }
+    }
+
+    @media screen and (max-width: 40em) {
+        .ui-table.ui-table-responsive .ui-paginator-top {
+            border-bottom: $tableBorder;
+        }
+        .ui-table.ui-table-responsive .ui-paginator-bottom {
+            border-top: $tableBorder;
+        }
+        .ui-table.ui-table-responsive .ui-table-tbody > tr > td {
+            border: 0 none;
+        }
+    }
+}

@@ -1,0 +1,103 @@
+.hj-icon {
+    font: normal normal normal 1em HerffJonesIcons;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    text-rendering: auto;
+}
+//.hj-icon-combine:before   { content: "\f020"; }
+//.hj-icon-ads:before       { content: "\f020"; }
+//.hj-icon-template:before  { content: "\f021"; }
+//.hj-icon-art:before       { content: "\f022"; }
+//.hj-icon-popins:before    { content: "\f023"; }
+
+.hj-icon-mods:before {
+    content: '\e000';
+}
+.hj-icon-art:before {
+    content: '\e001';
+}
+.hj-icon-template:before {
+    content: '\e002';
+}
+.hj-icon-combine:before {
+    content: '\e003';
+}
+.hj-icon-create-share:before {
+    content: '\e005';
+}
+.hj-icon-ads:before {
+    content: '\e007';
+}
+.hj-icon-images:before {
+    content: '\e008';
+}
+.hj-icon-catalog:before {
+    content: '\e009';
+}
+.hj-icon-portrait-replace:before {
+    content: '\e00e';
+}
+.hj-icon-download:before {
+    content: '\e00d';
+}
+.hj-icon-downloaded:before {
+    content: '\e00f';
+}
+
+//svg size helpers
+
+.svg-1 {
+    height: 1em;
+    width: auto;
+}
+.svg-2 {
+    height: 2em;
+    width: auto;
+}
+
+//special icon for grid
+.return-to-grid {
+    font-size: 0.9em;
+    vertical-align: middle;
+    //color: $color_Neutral_Stonewall;
+    .fa-stack {
+        font-size: 0.65em;
+    }
+    .fa-reply {
+        color: $color_Grey_Night_Rider;
+        text-align: right;
+        top: 0.25em;
+        left: 0.25em;
+        font-size: 1.5em;
+    }
+}
+
+.svg-icon {
+    &.cmyk::before {
+        content: ' ';
+        display: inline-block;
+        background: url(/../../../assets/images/svg-icons/cmyk.svg);
+        height: 1.4em;
+        width: 1.4em;
+        margin-right: 0.5em;
+        vertical-align: bottom;
+    }
+    &.black-and-white::before {
+        content: ' ';
+        display: inline-block;
+        background: url(/../../../assets/images/svg-icons/black_white.svg);
+        height: 1.4em;
+        width: 1.4em;
+        margin-right: 0.5em;
+        vertical-align: bottom;
+    }
+    &.spot-color::before {
+        content: ' ';
+        display: inline-block;
+        background: url(/../../../assets/images/svg-icons/spot_color.svg);
+        height: 1.4em;
+        width: 1.4em;
+        margin-right: 0.5em;
+        vertical-align: bottom;
+    }
+}

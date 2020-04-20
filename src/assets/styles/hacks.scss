@@ -1,0 +1,4 @@
+//this fixes the problem of needing to use a row to get spacing right when not breaking things into the col.
+.no-row {
+    margin: 0 -15px;
+}

@@ -1,0 +1,67 @@
+<div class="container-fluid"> 
+    <div style="text-align:center" class="hj-containers-lg mt-3 p-2">
+        <h1></h1><span style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"> New User Registration </span> <h1></h1>
+        <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+            <div class="form-group row">
+                <label for="name" class="col-sm-4 col-lg-2 col-form-label">Name: </label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" formControlName="name"  id="name">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="email" class="col-sm-4 col-lg-2 col-form-label">Email: (Your UserId) </label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" formControlName="email" id="email">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="mobile" class="col-sm-4 col-lg-2 col-form-label">Mobile: </label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" formControlName="mobile" id="mobile">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="age" class="col-sm-4 col-lg-2 col-form-label">Age: </label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" formControlName="age" id="age">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="ailments" class="col-sm-4 col-lg-2 col-form-label">Ailments if any: </label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" formControlName="ailments" id="ailments">
+                </div>
+            </div>
+
+
+       
+            <div class="form-group row">
+                <label for="password" class="col-sm-4 col-lg-2 col-form-label">Password: </label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" formControlName="password" id="password">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="confirmPassword" class="col-sm-4 col-lg-2 col-form-label">Confirm Password: </label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" formControlName="confirmPassword" id="confirmPassword">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-sm-4 col-lg-2 col-form-label"></div>
+                <div class="col-sm-5">
+                    <button class="btn btn-hj-primary" type="submit" [disabled]="registrationForm.invalid">
+                        Submit
+                    </button>
+                    <button type="button" class="btn btn-hj-secondary ml-3">Cancel</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

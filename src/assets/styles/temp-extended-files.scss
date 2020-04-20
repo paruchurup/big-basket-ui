@@ -1,0 +1,7 @@
+/* ++++++++++++++++ Common extended files ++++++++++++++ */
+//defined as an extension because it is new and changing
+.appearance-none {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    //appearance: none; currently not supported by anyone
+}

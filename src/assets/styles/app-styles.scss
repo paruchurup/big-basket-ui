@@ -1,0 +1,134 @@
+body,
+html {
+    font-size: 12pt; //this set the base font size 1rem = 12px
+    //overflow: hidden;
+}
+
+//for pages that just have a header (eg home)
+.hj-viewport-height-header {
+    height: calc(100vh - #{$header-height});
+    overflow-y: auto;
+}
+//for pages that have the standard header and one page sub head (eg master list)
+.hj-viewport-height-subnav {
+    height: calc(100vh - #{$header-height} - #{$header-subnav-height});
+    overflow-y: auto;
+}
+//for pages that have the standard header and 2 sub heads (eg library)
+.hj-viewport-height-double-subnav {
+    height: calc(
+        100vh - #{$header-height} - #{$header-subnav-height} - #{$header-second-subnav-height}
+    );
+    overflow-y: auto;
+}
+a {
+    &:hover {
+        text-decoration: none;
+    }
+    &.disabled {
+        cursor: not-allowed;
+        pointer-events: none;
+    }
+}
+/* ************************************ TYPE  ******************************************* */
+h1,
+.h1 {
+    font-weight: 400;
+}
+//list header
+h2,
+.h2 {
+    font-weight: 700;
+}
+h3,
+.h3 {
+    font-weight: 400;
+}
+h4,
+.h4 {
+    font-weight: 700;
+}
+
+h5,
+.h5 {
+    font-weight: 400;
+}
+
+h6,
+.h6 {
+    font-weight: 400;
+    font-variant-caps: all-small-caps;
+}
+
+.hj-page-title {
+    @extend .h1;
+    display: inline-block;
+    margin: 0;
+}
+
+.hj-information-label {
+    text-transform: uppercase;
+    color: $color_Neutral_Silk;
+    font-size: 0.7rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+hr {
+    border-bottom: 1px solid $color_Neutral_Silk;
+}
+
+//Secret page mask
+.secret-page {
+    overflow: hidden;
+    position: relative;
+    &::before {
+        content: 'Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret Secret';
+        position: absolute;
+        top: -40%;
+        left: -30%;
+        width: 200%;
+        transform: rotate(-45deg);
+        height: 210%;
+        font-size: 2em;
+        color: $color_Neutral_Stonewall;
+        filter: opacity(0.5);
+        z-index: 1;
+    }
+}
+
+.secret-page-sm::before {
+    font-size: 1.2em;
+}
+
+//Tables
+.hj-table {
+    &.rounded-corners {
+        th:first-child {
+            border-top-left-radius: $border-radius;
+        }
+        th:last-child {
+            border-top-right-radius: $border-radius;
+        }
+    }
+    th {
+        border: 0;
+        background-color: $color_Neutral_Gallery;
+    }
+}
+
+//Search Filters
+.hj-search-filters-wrapper {
+    font-size: 0.7em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hj-search-filters-buttons {
+    display: inline-flex;
+    margin: 0 10px;
+    flex-grow: 1;
+    button {
+        margin-right: 5px;
+    }
+}

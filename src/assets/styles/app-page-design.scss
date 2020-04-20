@@ -1,0 +1,72 @@
+@import 'app-colors';
+
+//colors
+$pe-light-blue: #00aeff;
+$pe-light-gray: #a8a8a8;
+$pe-txt-gray: #545454;
+$pe-drk-gray: #414141;
+$pd-not-ready: #f25f8f;
+$pe-bg-gradient: linear-gradient(
+    to bottom,
+    rgba(209, 209, 209, 1) 0%,
+    rgba(209, 209, 209, 1) 1%,
+    rgba(226, 226, 226, 1) 2%,
+    rgba(254, 254, 254, 1) 100%
+);
+$pe-border-gray: #9a9a9a;
+
+$sub-nav-width: 12.5em;
+
+//for stroke box & fill box when no color is selected
+.blue-border {
+    border: 1px solid $pe-light-blue;
+}
+
+.not-ready {
+    color: $pd-not-ready !important;
+}
+
+// corner triangle for icons with flyout
+%corner-mark {
+    &::after {
+        font-size: 5px;
+        content: '◢';
+        position: absolute;
+        top: 28px;
+        left: 32px;
+        opacity: 0.4;
+    }
+}
+
+%flyout-base {
+    background-color: #fff;
+    box-shadow: 4px 9px 10px -5px rgba(0, 0, 0, 0.26);
+
+    border: 1px solid #9a9a9a;
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        font-size: 1rem;
+        color: $pe-txt-gray;
+        text-align: center;
+
+        &:hover {
+            background: #e4e4e4;
+            color: $color_HJ_Green;
+            cursor: pointer;
+        }
+    }
+}
+
+$pe-color-inner-margin: rgba(242, 95, 143, 1);
+
+$pe-color-outer-margin: grey;
+
+$pe-color-background: #c8c8c8;
+
+$pe-color-bleed-line: rgba(242, 95, 143, 0.6);

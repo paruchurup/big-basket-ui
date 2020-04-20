@@ -1,0 +1,135 @@
+/* ----------------Font Color ------------------*/
+
+//bootstrap has 5 text color classes available as well
+.hj-text-color-green {
+    color: $color_Green_LaPalma;
+}
+
+.hj-text-color-light-green {
+    color: $color_Green_Mint;
+}
+
+.hj-text-color-light-white {
+    color: $color_Neutral_Alabaster;
+}
+
+.hj-text-color-important {
+    color: $color_Red_Cinnabar !important;
+}
+
+/* ----------------Page Status Colors------------------*/
+//edited
+.edited-text {
+    color: $color_Edited;
+}
+
+//un-edited (
+.unedited-text {
+    color: $color_Unedited;
+}
+
+//submitted
+.submitted-text {
+    color: $color_Submitted;
+}
+
+//pre-submit
+
+.presubmit-text {
+    color: $color_Presubmit;
+}
+
+//in proof
+.proof-text {
+    color: $color_Proof;
+}
+
+//in preflight
+.preflight-text {
+    color: $color_Blue_Baby;
+}
+
+//Status Backgrounds
+//edited
+.edited-bg {
+    background-color: $color_Edited;
+}
+//un-edited (
+.unedited-bg {
+    background-color: $color_Unedited;
+}
+//submitted
+.submitted-bg {
+    background-color: $color_Submitted;
+}
+//pre-submit
+
+.presubmit-bg {
+    background-color: $color_Presubmit;
+}
+//in proof
+.proof-bg {
+    background-color: $color_Proof;
+}
+
+//in preflight
+.preflight-bg {
+    background-color: $color_Blue_Baby;
+}
+
+//in overdue
+.overdue-text {
+    @extend .hj-text-color-important;
+}
+.hj-low {
+    background-color: $danger;
+}
+.hj-moderate {
+    background-color: $warning;
+}
+.hj-good {
+    background-color: $success;
+}
+.hj-excess {
+    background-color: black;
+}
+/* ----------------Background Colors ------------------*/
+
+.hj-bg-standard {
+    background: $color_Neutral_BG;
+}
+
+.hj-med-background-color {
+    background-color: $color_Neutral_Soapstone;
+}
+
+.hj-bg-light-white {
+    background-color: $color_Neutral_Alabaster;
+}
+.hj-bg-white {
+    background-color: #fff;
+}
+
+.hj-bg-green {
+    background-color: $color_HJ_Green;
+}
+
+/* ----------------Gradients ------------------*/
+.hj-gradient-navbar {
+    background: linear-gradient(0deg, $color_NavGrad_Bot 0, $color_NavGrad_Top 100%);
+    border-left: none;
+    border-radius: 0;
+    border-right: none;
+}
+
+.hj-gradient-primary-btn {
+    background: linear-gradient(0deg, $color_ActiveBtnGrad_Bot 0, $color_ActiveBtnGrad_Top 100%);
+}
+
+.hj-gradient-selection-btn {
+    background: linear-gradient(0deg, #616161 0, #212121 100%);
+}
+
+.hj-gradient-inactive-btn {
+    background: linear-gradient(0deg, #bdbdbd, #757575 100%);
+}
